@@ -115,7 +115,7 @@ body {
 }
 
   main {
-    margin: 4em 2em 1em 1em;
+    margin: 7em 2em 1em 1em;
     ::selection {
       color: var(--bg-text-selection);
       background-color: var(--bg-selection);  
