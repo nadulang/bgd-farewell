@@ -1,0 +1,121 @@
+/*Copyright: https://github.com/nadulang 
+
+aligned with CSS Wrapped 2023
+https://developer.chrome.com/blog/css-wrapped-2023
+*/
+
+/*create var first*/
+:root {
+  --black: black;
+  --white: white;
+  --light-pearl: #F1EDE6;
+  --bg-light-color: var(--light-pearl);
+  --bg-dark-color: var(--black);
+  --text-light-color: var(--white);
+  --text-dark-color: var(--black);
+  --shadow: 0 0 10px hsl(var(--hue-value-1), 40%, 90%);
+  --border-color: var(--black);
+  --font-Montserrat: "Montserrat";
+  --font-Roboto: "Roboto";
+  --font-Bebas: "Bebas Neue";
+  --bg-selection: var(--white);
+  --bg-text-selection: var(--black);
+  --nav-bg-selection: var(--black);
+  --nav-text-selection: var(--light-pearl);
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    position: static;
+    background: var(--bg-dark-color);
+    color: var(--text-light-color);
+    text-wrap: balance;
+  }
+
+  header {
+    background: var(--bg-light-color);
+    padding: 2em 4em 2em 1.5em;
+
+    nav {
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+          display: inline-block;
+          margin-left: 1em;
+
+          a {
+            font-family: var(--font-Montserrat);
+            color: var(--black);
+            text-decoration: none;
+            display: block;
+            padding: 0 0.5em; 
+            transition: color 0.3s ease;      
+          }  
+
+        a:hover {
+          color: var(--text-dark-color);
+        }
+        a::selection {
+          color: var(--nav-text-selection);
+          background-color: var(--nav-bg-selection);  
+        }  
+  
+        }
+    }
+    }
+  
+  }
+
+.header-backdrop,
+.header-close-btn,
+.header-hamburger-btn {
+    display: none;
+}
+
+  main {
+    margin: 4em 1em 1em 1em;
+    ::selection {
+      color: var(--bg-text-selection);
+      background-color: var(--bg-selection);  
+    } 
+  } 
+
+  .bgd-img {
+    /*center image*/
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 50%;
+    /*flexible to mobile-view*/
+    margin-top: 3em !important;
+    margin-bottom: 3em !important;
+  }
+
+ #congratulations {
+    display: inline-block;
+    margin-top: 1em;
+    span.col.party-popper {
+      font-size: 40px;
+      animation: bounce;
+      animation-duration: 2s;  
+    }
+  }
+
+  #go {
+    --animate-delay: 0.5s;
+  }
+
+  h1 {
+    font-size: 5em;
+    font-family: var(--font-Bebas)
+  }
+
+  h3
+  {
+    font-size: 2em;
+    font-family: var(--font-Montserrat)
+  }
+  
