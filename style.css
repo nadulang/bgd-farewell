@@ -4,40 +4,84 @@ aligned with CSS Wrapped 2023
 https://developer.chrome.com/blog/css-wrapped-2023
 */
 
+@font-face {
+  font-family: 'Gorgeous Serif Font Regular';
+  src: url('fonts\Gorgeous Serif Font Regular\Gorgeous Serif Font Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /*create var first*/
 :root {
   --black: black;
   --white: white;
   --light-pearl: #F1EDE6;
+  --gold: #B27A3E;
   --bg-light-color: var(--light-pearl);
   --bg-dark-color: var(--black);
-  --text-light-color: var(--white);
+  --text-light-color: var(--light-pearl);
+  --text-gold-color: var(--gold);
   --text-dark-color: var(--black);
   --shadow: 0 0 10px hsl(var(--hue-value-1), 40%, 90%);
   --border-color: var(--black);
-  --font-Montserrat: "Montserrat";
-  --font-Roboto: "Roboto";
-  --font-Bebas: "Bebas Neue";
+  --main-font: "Twister";
+  --second-font: "Gorgeous Serif Font Regular";
   --bg-selection: var(--white);
   --bg-text-selection: var(--black);
   --nav-bg-selection: var(--black);
   --nav-text-selection: var(--light-pearl);
 }
 
+/* html {
+  height: 100%;
+} */
+
+.with-video {
+width: 100%;
+height: 100vh;
+background-image: var(--bg-light-color);
+position: relative;
+padding: 0 5%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
 body {
     margin: 0;
     overflow-x: hidden;
     position: static;
-    background: var(--bg-dark-color);
-    color: var(--text-light-color);
+    background-color: var(--bg-light-color);
+    color: var(--text-dark-color);
     text-wrap: balance;
+    /* height: 100%; */
+    /* background-image: url('assets/main-bg.webp'); */
+    /* Full height */
+    /* height: 100%; */
+    /* Center and scale the image nicely */
+    /* background-position: center;
+    background-repeat: repeat;
+    background-size: cover; */
+  }
+
+  #memories {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  height: 129%;
   }
 
   header {
-    background: var(--bg-light-color);
     padding: 2em 4em 2em 1.5em;
 
     nav {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      display: flex;
+      padding: 1.5em 8%;
+      align-items: center;
       ul {
         list-style: none;
         margin: 0;
@@ -47,8 +91,8 @@ body {
           margin-left: 1em;
 
           a {
-            font-family: var(--font-Montserrat);
-            color: var(--black);
+            font-family: var(--second-font);
+            color: var(--text-dark-color);
             text-decoration: none;
             display: block;
             padding: 0 0.5em; 
@@ -56,7 +100,7 @@ body {
           }  
 
         a:hover {
-          color: var(--text-dark-color);
+          color: var(--text-gold-color);
         }
         a::selection {
           color: var(--nav-text-selection);
@@ -83,14 +127,13 @@ body {
     } 
   } 
 
-  .bgd-img {
+  .bgd-img img{
     /*center image*/
     display: block;
     margin-left: auto !important;
     margin-right: auto !important;
-    width: 50%;
-    /*flexible to mobile-view*/
-    margin-top: 3em !important;
+    width: 60%;
+    margin-top: -3em !important;
     margin-bottom: 3em !important;
   }
 
@@ -110,12 +153,41 @@ body {
 
   h1 {
     font-size: 5em;
-    font-family: var(--font-Bebas)
+    font-family: var(--main-font)
   }
+
+  .quote {
+    width: 3vh;
+    bottom: min(4.2361111111vw, 7.5308641975vh);
+    color: var(--text-gold-color);
+    left: min(4.4444444444vw, 7.9012345679vh);
+    position: absolute;
+    z-index: 1;
+}
+
+#border
+{
+  border: 1px solid var(--text-gold-color) !important;
+  margin: 1em 1em 1em 0;
+}
 
   h3
   {
     font-size: 2em;
-    font-family: var(--font-Montserrat)
+    font-family: var(--second-font);
+    color: var(--text-gold-color);
   }
   
+  @media (min-aspect-ratio: 16/9) {
+    #memories {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @media (max-aspect-ratio: 16/9) {
+    #memories {
+      width: auto;
+      height: 100%;
+    }
+  }
