@@ -1,17 +1,17 @@
 function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
+    var x = document.getElementById("main-menu");
+    if (x.className === "main-nav") {
       x.className += " responsive";
     } else {
-      x.className = "topnav";
+      x.className = "main-nav";
     }
   }
 
 $(document).on('scroll', function(){
     if ( $(window).scrollTop() > 30) {
-        $('#myTopnav').addClass('active');
+        $('#main-menu').addClass('active');
     } else {
-        $('#myTopnav').removeClass('active');
+        $('#main-menu').removeClass('active');
     }
 });
 

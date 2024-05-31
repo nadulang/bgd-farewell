@@ -68,7 +68,7 @@ body {
   height: 129%;
   }
 
-  .topnav {
+  .main-nav {
     overflow: hidden;
     display: flex;
     position: fixed;
@@ -78,7 +78,7 @@ body {
     padding-left: 60vw;
   }
   
-  .topnav a {
+  .main-nav a {
     float: left;
     display: block;
     color: var(--text-dark-color);
@@ -89,11 +89,11 @@ body {
     font-family: var(--second-font);
   }
   
-  .topnav a:hover {
+  .main-nav a:hover {
     color: var(--text-gold-color);
   }
   
-  .topnav .icon {
+  .main-nav .icon {
     display: none;
   }
     
@@ -212,7 +212,7 @@ body {
       height: 32vh;
     }
 
-    .topnav 
+    .main-nav 
     {
       display: block;
       position: relative;
@@ -221,19 +221,19 @@ body {
         display: none;
       }
     }
-    .topnav a.icon {
+    .main-nav a.icon {
       float: right;
       display: block;
     }
-    .topnav.responsive {
+    .main-nav.responsive {
       position: relative;
     }
-    .topnav.responsive .icon {
+    .main-nav.responsive .icon {
       position: absolute;
       right: 0;
       top: 0;
     }
-    .topnav.responsive  {
+    .main-nav.responsive  {
       a {
       float: none;
       display: block;
