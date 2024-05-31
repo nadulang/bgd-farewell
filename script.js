@@ -35,7 +35,7 @@ var words = ['Dear bestie, makasi banyak atas bantuan dan kerja samanya selama i
     len = words.length,
     forwards = true,
     skip_count = 0,
-    skip_delay = 15,
+    skip_delay = 50,
     speed = 70;
 var wordflick = function () {
   setInterval(function () {
