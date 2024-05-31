@@ -76,6 +76,9 @@ body {
     right: 0;
     width: 100%;
     padding-left: 60vw;
+    background-color: var(--white);
+    border-bottom: 0.5px solid var(--white);
+    opacity: 90%;
   }
   
   .main-nav a {
@@ -101,6 +104,7 @@ body {
     background-color: var(--white);
     border-bottom: 0.5px solid var(--white);
     opacity: 90%;
+    z-index: 99;
 }
 
   main {
@@ -174,6 +178,7 @@ body {
   }
 
   img.bg-letters {
+    position: relative;
     z-index: -1;
     width: -webkit-fill-available !important;
     height: auto;
