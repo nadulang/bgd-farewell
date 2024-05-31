@@ -96,99 +96,11 @@ body {
   .topnav .icon {
     display: none;
   }
-  
-  @media screen and (max-width: 767px) {
-
-    .topnav 
-    {
-      display: block;
-      position: relative;
-      padding-left: 0 !important;
-      a {
-        display: none;
-      }
-    }
-    .topnav a.icon {
-      float: right;
-      display: block;
-    }
-  }
-  
-  @media screen and (max-width: 767px) {
-    .topnav.responsive {
-      position: relative;
-    }
-    .topnav.responsive .icon {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .topnav.responsive  {
-      a {
-      float: none;
-      display: block;
-      text-align: left;
-      background-color: white;
-      opacity: 90;
-      }
-      a:hover {
-        background-color: var(--bg-light-color);
-        color: var(--text-gold-color);  
-      }
-    }  
-  }
-  /* header {
-    padding: 2em 4em 2em 1.5em;
-    position: fixed;
-    display: flex;
-    top: 0;
-    width: 100%;
-    padding: 1.5em 8%;
-    justify-content: end;
-    z-index: 99;
-    nav {
-      align-items: center;
-      ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        li {
-          display: inline-block;
-          margin-left: 1em;
-
-          a {
-            font-family: var(--second-font);
-            color: var(--text-dark-color);
-            text-decoration: none;
-            display: block;
-            padding: 0 0.5em; 
-            transition: color 0.3s ease;      
-          }  
-
-        a:hover {
-          color: var(--text-gold-color);
-        }
-        a::selection {
-          color: var(--nav-text-selection);
-          background-color: var(--nav-bg-selection);  
-        }  
-  
-        }
-    }
-    }
-  
-  } */
-
+    
   .active {
     background-color: var(--white);
     border-bottom: 0.5px solid var(--white);
     opacity: 90%;
-}
-
-.header-backdrop,
-.header-close-btn,
-.header-hamburger-btn {
-    display: none;
 }
 
   main {
@@ -298,6 +210,53 @@ body {
   @media (max-width: 767px) {
     .with-video {
       height: 32vh;
+    }
+
+    .topnav 
+    {
+      display: block;
+      position: relative;
+      padding-left: 0 !important;
+      a {
+        display: none;
+      }
+    }
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+    .topnav.responsive {
+      position: relative;
+    }
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive  {
+      a {
+      float: none;
+      display: block;
+      text-align: left;
+      background-color: white;
+      opacity: 90;
+      }
+      a:hover {
+        background-color: var(--bg-light-color);
+        color: var(--text-gold-color);  
+      }
+    } 
+
+    h1 {
+      font-size: 4.5em;
+    }
+
+    #go {
+      text-align: center;
+    }
+
+    div#farewell {
+      margin: 1em !important;
     }
 
     .greeting {
